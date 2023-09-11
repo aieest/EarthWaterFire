@@ -1,0 +1,111 @@
+:root {
+    --Color: #401F38; 
+    --Background: #F2EEDC;
+    --Primary: #F03768;
+    --Secondary: #f8b9ca;
+    --Accent: #A8EDC5;
+}
+
+* {
+    margin: 0;
+    display: 0;
+    font-family: Montserrat;
+}
+
+body {
+    overflow: hidden;
+}
+
+main {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--Background);
+}
+
+
+.player-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+div.button {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 10rem;
+    width: 10rem;
+    margin: 1rem;
+    border-radius: 20px;
+    color: var(--Primary);
+    transition: 0.35s;
+}
+
+div.button:hover {
+    color: var(--Color);
+    height: 11rem;
+    width: 11rem;
+    box-shadow: 1px 1px 10px var(--Color);
+}
+
+.fa-solid {
+    font-size: 100px;
+    color: inherit;
+}
+
+.result-container {
+    align-self: center;
+    justify-self: center;
+}
+
+.result-container h1 {
+    color: var(--Color);
+    font-size: 70px;
+    text-align: center;
+}
+
+.ai-move {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+
+/* MOBILE RES */
+
+@media only screen and (max-width: 600px) {
+    
+    main {
+        grid-template-columns: 1fr;
+    }
+    
+    .player-btns {
+        flex-direction: row;
+    }
+
+    div.button {
+        height: 6rem;
+        width: 6rem;
+    }
+
+    div.button:hover {
+        height: 7rem;
+        width: 7rem;
+    }
+
+    .fa-solid {
+        font-size: 60px;
+    }
+
+    .result-container h1 {
+        color: var(--Color);
+        font-size: 40px;
+        text-align: center;
+    }
+
+    #ai-choice {
+        font-size: 20px;
+    }
+  }
